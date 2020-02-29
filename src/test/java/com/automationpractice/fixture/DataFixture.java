@@ -7,20 +7,12 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
+import org.junit.platform.engine.support.hierarchical.ParallelExecutionConfiguration;
+import org.junit.platform.engine.support.hierarchical.ParallelExecutionConfigurationStrategy;
 
 import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URL;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.WebDriverRunner.setWebDriver;
-
 
 public class DataFixture {
     protected String correctEmail = "Sergei199@list.ru";
