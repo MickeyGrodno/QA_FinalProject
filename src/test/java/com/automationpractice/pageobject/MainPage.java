@@ -86,7 +86,7 @@ public class MainPage {
 
     public MainPage addFirstProductInCartWithSetQuantity(String value) {
         firstProductInPage.click();
-        $(By.xpath("//input[@id='quantity_wanted']")).clear();
+        $(By.xpath("//input[@id='quantity_wanted']")).should(exist).clear();
         $(By.xpath("//input[@id='quantity_wanted']")).setValue(value);
         addToCartButton.click();
         if($("a.fancybox-item.fancybox-close").should(exist).isDisplayed()) {

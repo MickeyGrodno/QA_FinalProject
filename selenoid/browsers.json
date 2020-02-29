@@ -1,0 +1,10 @@
+{
+  "chrome": {
+    "default": "80.0.3987.106",
+    "versions": {
+      "80.0.3987.106": {
+        "image": ["E:\\QA_WEB_AUTOMATOR\\FinalProject\\selenoid\\chromedriver.exe","--log-level=DEBUG"]
+      }
+    }
+  }
+}
