@@ -1,18 +1,17 @@
 {
-  "chrome": {
-    "default": "80.0.3987.106",
-    "versions": {
-      "80.0.3987.106": {
-        "image": ["E:\\QA_WEB_AUTOMATOR\\FinalProject\\selenoid\\chromedriver.exe", "--log-level=DEBUG"]
-      }
-    }
-  },
-
   "internet explorer": {
     "default": "11",
     "versions": {
       "11": {
         "image": ["E:\\QA_WEB_AUTOMATOR\\FinalProject\\selenoid\\IEDriverServer.exe", "--log-level=DEBUG"]
+      }
+    }
+  },
+  "chrome": {
+    "default": "latest",
+    "versions": {
+      "latest": {
+        "image": ["E:\\QA_WEB_AUTOMATOR\\FinalProject\\selenoid\\chromedriver.exe", "--log-level=DEBUG"]
       }
     }
   }

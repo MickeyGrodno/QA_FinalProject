@@ -9,6 +9,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.platform.engine.support.hierarchical.ParallelExecutionConfiguration;
 import org.junit.platform.engine.support.hierarchical.ParallelExecutionConfigurationStrategy;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 
@@ -25,22 +28,23 @@ public class DataFixture {
 
 
     @BeforeEach
-    public void beforeTest() throws MalformedURLException, MalformedURLException {
-//        Configuration.holdBrowserOpen = true;
+    public void beforeTest() {
         Configuration.baseUrl = startPageUrl;
+        Configuration.browser = "internet explorer";
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        capabilities.setBrowserName("internet explorer");
+        capabilities.setPlatform(Platform.WINDOWS);
+        capabilities.setVersion("11");
+        capabilities.setCapability("acceptSslCerts",true);
+        capabilities.setAcceptInsecureCerts(false);
         Configuration.remote = "http://localhost:4444/wd/hub/";
-        Configuration.browser = "chrome";
-//        Configuration.browser = "internet explorer";
-        Configuration.browserSize = "1920x1080";
-//        Configuration.browserVersion = "80.0.3987.106";
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setBrowserName("chrome");
-//        capabilities.setVersion("80.0.3987.106");
-//        capabilities.setPlatform(Platform.ANY);
-//        capabilities.setCapability("enableVNC", true);
-//        capabilities.setCapability("enableVideo", true);
-//        Configuration.browserCapabilities = capabilities;
-        open("");
+        Configuration.browserCapabilities = capabilities;
+//        Configuration.browserSize = "1920x1080";
+
+//        Configuration.browser = "chrome";
+
+        open(startPageUrl);
     }
 
     @AfterEach
