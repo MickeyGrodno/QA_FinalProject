@@ -29,6 +29,7 @@ public class DataFixture {
 
     @BeforeEach
     public void beforeTest() {
+        Configuration.headless = true;
         Configuration.baseUrl = startPageUrl;
         Configuration.browser = "internet explorer";
         DesiredCapabilities capabilities = new DesiredCapabilities();
