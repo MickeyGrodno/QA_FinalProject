@@ -29,7 +29,8 @@ public class DataFixture {
 //        Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = startPageUrl;
         Configuration.remote = "http://localhost:4444/wd/hub/";
-        Configuration.browser = "chrome";
+//        Configuration.browser = "chrome";
+        Configuration.browser = "internet explorer";
         Configuration.browserSize = "1920x1080";
 //        Configuration.browserVersion = "80.0.3987.106";
 //        DesiredCapabilities capabilities = new DesiredCapabilities();
