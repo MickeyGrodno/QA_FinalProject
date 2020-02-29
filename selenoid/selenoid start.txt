@@ -1,0 +1,3 @@
+cm.exe -conf browser.json -disable-docker
+
+./selenoid_windows_amd64.exe -conf browsers.json -disable-docker -capture-driver-logs
