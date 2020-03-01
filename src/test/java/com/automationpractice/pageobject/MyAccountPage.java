@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 public class MyAccountPage {
-    SelenideElement ordersButton = $(By.xpath("//a [@title= 'Orders']"));
+    private SelenideElement ordersButton = $(By.xpath("//a [@title= 'Orders']"));
 
     public boolean orderIsPresent(String orderName) {
         ordersButton.click();

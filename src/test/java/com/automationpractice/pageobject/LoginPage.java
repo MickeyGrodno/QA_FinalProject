@@ -7,10 +7,10 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
 
-    SelenideElement userEmail = $(By.id("email"));
-    SelenideElement userPassword = $(By.id("passwd"));
-    SelenideElement signInButton = $(By.id("SubmitLogin"));
-    SelenideElement invalidPasswordAllert = $(By.xpath("//li [text()='Invalid password.']"));
+    private SelenideElement userEmail = $(By.id("email"));
+    private SelenideElement userPassword = $(By.id("passwd"));
+    private SelenideElement signInButton = $(By.id("SubmitLogin"));
+    private SelenideElement invalidPasswordAllert = $(By.xpath("//li [text()='Invalid password.']"));
 
     public MyAccountPage loginWithCorrectData(String email, String password) {
         userEmail.setValue(email);

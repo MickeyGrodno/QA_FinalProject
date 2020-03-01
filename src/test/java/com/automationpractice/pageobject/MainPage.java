@@ -11,17 +11,16 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class MainPage {
-    SelenideElement womenButton = $(By.xpath("//a[text()='Women']"));
-
-    SelenideElement dressesButton = $(By.xpath("//div/ul/li/a[text()='Dresses']"));
-    SelenideElement womenButtonMenu = $(By.xpath("//a[text()='Women']/following-sibling::*"));
-    SelenideElement dressesButtonMenu = $(By.xpath("//div/ul/li/a[text() = 'Dresses']/following-sibling::*"));
-    SelenideElement searchField = $(By.id("search_query_top"));
-    SelenideElement searchButton = $(By.name("submit_search"));
-    SelenideElement shoppingCartButton = $("div.shopping_cart>a");
-    SelenideElement firstProductInPage = $("ul#homefeatured>li>div");
-    SelenideElement addToCartButton = $("p.buttons_bottom_block>button.exclusive");
-    SelenideElement singInButton = $(By.className("login"));
+    private SelenideElement womenButton = $(By.xpath("//a[text()='Women']"));
+    private SelenideElement dressesButton = $(By.xpath("//div/ul/li/a[text()='Dresses']"));
+    private SelenideElement womenButtonMenu = $(By.xpath("//a[text()='Women']/following-sibling::*"));
+    private SelenideElement dressesButtonMenu = $(By.xpath("//div/ul/li/a[text() = 'Dresses']/following-sibling::*"));
+    private SelenideElement searchField = $(By.id("search_query_top"));
+    private SelenideElement searchButton = $(By.name("submit_search"));
+    private SelenideElement shoppingCartButton = $("div.shopping_cart>a");
+    private SelenideElement firstProductInPage = $("ul#homefeatured>li>div");
+    private SelenideElement addToCartButton = $("p.buttons_bottom_block>button.exclusive");
+    private SelenideElement singInButton = $(By.className("login"));
 
     private MainPage searchProduct(String query) {
         searchField.setValue(query);
@@ -62,10 +61,10 @@ public class MainPage {
         womenButton.click();
         $("div.block_content>ul.tree>li.last>a").click();
         $(By.xpath("//div[@class='block_content']//ul//a[contains(text(),'Summer Dresses')]")).click();
-//        .should(exist)
         url2 = url();
         return url1.equals(url2);
     }
+
     public int addAllDressesToCart() {
         womenButton.click();
         $("div.block_content>ul.tree>li.last>a").click();
@@ -79,6 +78,7 @@ public class MainPage {
         }
         return allProducts.size();
     }
+
     public ShoppingCartPage goToShoppingCartPage() {
         shoppingCartButton.click();
         return new ShoppingCartPage();
