@@ -67,24 +67,6 @@
                             </resources>
                         </configuration>
                     </execution>
-
-                    <execution>
-                        <id>copy-resources1</id>
-                        <phase>generate-test-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>allure-results/history</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>allure-report/history</directory>
-                                    <includes>
-                                    </includes>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
                 </executions>
             </plugin>
             <plugin>
