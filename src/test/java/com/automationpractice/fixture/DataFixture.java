@@ -28,7 +28,7 @@ public class DataFixture {
 
         Configuration.baseUrl = startPageUrl;
         Configuration.browser = "chrome";
-        Configuration.headless = true;
+//        Configuration.headless = true;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setAcceptInsecureCerts(false);
         capabilities.setCapability("enableVideo", false);
