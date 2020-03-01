@@ -4,6 +4,7 @@ import com.automationpractice.pageobject.MainPage;
 import com.automationpractice.pageobject.MyAccountPage;
 import com.automationpractice.pageobject.ShoppingCartPage;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Screenshots;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,19 +30,14 @@ public class DataFixture {
 
     @BeforeEach
     public void beforeTest() {
-        Configuration.headless = true;
-        Configuration.baseUrl = startPageUrl;
-        Configuration.browser = "internet explorer";
-        DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        capabilities.setBrowserName("internet explorer");
-        capabilities.setPlatform(Platform.WINDOWS);
-        capabilities.setVersion("11");
-        capabilities.setCapability("acceptSslCerts",true);
+        Configuration.baseUrl = startPageUrl;
+        Configuration.browser = "chrome";
+        Configuration.headless = true;
+        DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setAcceptInsecureCerts(false);
         Configuration.remote = "http://localhost:4444/wd/hub/";
         Configuration.browserCapabilities = capabilities;
-//        Configuration.browserSize = "1920x1080";
 
 //        Configuration.browser = "chrome";
 

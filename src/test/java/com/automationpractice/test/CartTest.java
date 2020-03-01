@@ -2,9 +2,12 @@ package com.automationpractice.test;
 
 import com.automationpractice.fixture.DataFixture;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Execution(ExecutionMode.CONCURRENT)
 public class CartTest extends DataFixture {
     @Test
     public void addProductInCartTest() {

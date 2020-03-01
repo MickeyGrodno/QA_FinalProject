@@ -3,7 +3,7 @@
     "default": "11",
     "versions": {
       "11": {
-        "image": ["E:\\QA_WEB_AUTOMATOR\\FinalProject\\selenoid\\IEDriverServer.exe", "--log-level=DEBUG"]
+        "image": ["E:\\QA_WEB_AUTOMATOR\\FinalProject\\selenoid\\headless_ie_selenium.exe", "--log-level=DEBUG"]
       }
     }
   },
@@ -12,6 +12,14 @@
     "versions": {
       "latest": {
         "image": ["E:\\QA_WEB_AUTOMATOR\\FinalProject\\selenoid\\chromedriver.exe", "--log-level=DEBUG"]
+      }
+    }
+  },
+  "MicrosoftEdge": {
+    "default": "latest",
+    "versions": {
+      "latest": {
+        "image": ["E:\\QA_WEB_AUTOMATOR\\FinalProject\\selenoid\\msedgedriver.exe", "--log-level=DEBUG"]
       }
     }
   }
