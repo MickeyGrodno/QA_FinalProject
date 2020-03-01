@@ -4,17 +4,10 @@ import com.automationpractice.pageobject.MainPage;
 import com.automationpractice.pageobject.MyAccountPage;
 import com.automationpractice.pageobject.ShoppingCartPage;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Screenshots;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.platform.engine.support.hierarchical.ParallelExecutionConfiguration;
-import org.junit.platform.engine.support.hierarchical.ParallelExecutionConfigurationStrategy;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.net.MalformedURLException;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -36,10 +29,9 @@ public class DataFixture {
         Configuration.headless = true;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setAcceptInsecureCerts(false);
-        Configuration.remote = "http://localhost:4444/wd/hub/";
+        capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-
-//        Configuration.browser = "chrome";
+        Configuration.remote = "http://localhost:4444/wd/hub/";
 
         open(startPageUrl);
     }
