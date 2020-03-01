@@ -1,3 +1,7 @@
-cm.exe -conf browser.json -disable-docker
+selenoid_windows_amd64.exe -conf browsers.json -disable-docker -capture-driver-logs
 
-./selenoid_windows_amd64.exe -conf browsers.json -disable-docker -capture-driver-logs
+selenoid-ui_windows_amd64.exe -listen localhost:4445
+
+http://localhost:4445/#/videos
+
+selenoid-ui_windows_amd64.exe -listen localhost:4445 $-video-output-dir E:/QA_WEB_AUTOMATOR/FinalProject/selenoid/video
