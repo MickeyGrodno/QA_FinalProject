@@ -1,6 +1,6 @@
 selenoid_windows_amd64.exe -conf browsers.json -disable-docker -capture-driver-logs
 
-selenoid-ui_windows_amd64.exe -listen localhost:4445
+с
 
 http://localhost:4445/#/videos
 

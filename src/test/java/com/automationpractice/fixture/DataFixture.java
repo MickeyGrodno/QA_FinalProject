@@ -27,7 +27,7 @@ public class DataFixture {
     public void beforeTest() {
 
         Configuration.baseUrl = startPageUrl;
-        Configuration.browser = "chrome";
+//        Configuration.browser = "chrome";
         Configuration.headless = true;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setAcceptInsecureCerts(false);
