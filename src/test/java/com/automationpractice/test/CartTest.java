@@ -1,6 +1,7 @@
 package com.automationpractice.test;
 
 import com.automationpractice.fixture.DataFixture;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
@@ -16,6 +17,7 @@ public class CartTest extends DataFixture {
         assertEquals(allAddedDresses, mainPage.goToShoppingCartPage().getNumberOfProductsInCart());
     }
 
+    @Disabled
     @Test
     public void addZeroQuantityOfProductsTest() {
         mainPage.addFirstProductInCartWithSetQuantity("0");

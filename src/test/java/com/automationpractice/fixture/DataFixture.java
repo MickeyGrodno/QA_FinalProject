@@ -32,6 +32,7 @@ public class DataFixture {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setAcceptInsecureCerts(false);
         capabilities.setCapability("enableVideo", false);
+        capabilities.setCapability("enableVNC", false);
         Configuration.browserCapabilities = capabilities;
         Configuration.remote = "http://localhost:4444/wd/hub/";
 
